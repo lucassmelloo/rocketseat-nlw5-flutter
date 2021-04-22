@@ -1,7 +1,7 @@
-import 'package:DevQuiz/home/widgets/levelbutton/level_button_widget.dart';
-import 'package:DevQuiz/home/widgets/quizcard/quiz_card_widgets.dart';
+import 'package:devquiz/home/widgets/levelbutton/level_button_widget.dart';
+import 'package:devquiz/home/widgets/quizcard/quiz_card_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:DevQuiz/home/widgets/appbar/app_bar_widget.dart';
+import 'package:devquiz/home/widgets/appbar/app_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);

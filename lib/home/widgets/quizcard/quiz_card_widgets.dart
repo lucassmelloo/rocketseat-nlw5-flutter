@@ -1,8 +1,8 @@
-import 'package:DevQuiz/core/app_images.dart';
-import 'package:DevQuiz/core/app_text_styles.dart';
-import 'package:DevQuiz/shared/widgets/progressindicator/progress_indicator_widget.dart';
+import 'package:devquiz/core/app_images.dart';
+import 'package:devquiz/core/app_text_styles.dart';
+import 'package:devquiz/shared/widgets/progressindicator/progress_indicator_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:DevQuiz/core/app_colors.dart';
+import 'package:devquiz/core/app_colors.dart';
 
 class QuizCardWidget extends StatelessWidget {
   const QuizCardWidget({Key? key}) : super(key: key);
