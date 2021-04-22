@@ -1,5 +1,5 @@
-import 'package:devquiz/challenge/widgets/awnswer/anwser_widget.dart';
-import 'package:devquiz/core/core.dart';
+import 'package:DevQuiz/challenge/widgets/awnswer/anwser_widget.dart';
+import 'package:DevQuiz/core/core.dart';
 import 'package:flutter/material.dart';
 
 class QuizWidget extends StatelessWidget {
