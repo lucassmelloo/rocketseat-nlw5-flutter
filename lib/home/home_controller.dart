@@ -1,7 +1,6 @@
-import 'package:DevQuiz/core/app_images.dart';
+import 'package:DevQuiz/home/home_repository.dart';
 import 'package:DevQuiz/home/home_state.dart';
-import 'package:DevQuiz/shared/models/answer_model.dart';
-import 'package:DevQuiz/shared/models/question_model.dart';
+
 import 'package:DevQuiz/shared/models/quiz_model.dart';
 import 'package:DevQuiz/shared/models/user_model.dart';
 import 'package:flutter/foundation.dart';
@@ -14,51 +13,17 @@ class HomeController {
   UserModel? user;
   List<QuizModel>? quizzes;
 
+  final repository = HomeRepository();
+
   void getUser() async {
     state = HomeState.loading;
-    await Future.delayed(Duration(seconds: 2));
-
-    user = UserModel(
-        name: "Lucas Mello", photoUrl: "https://github.com/lucassmelloo.png");
+    user = await repository.getUser();
     state = HomeState.success;
   }
 
   void getQuizzes() async {
     state = HomeState.loading;
-    await Future.delayed(Duration(seconds: 2));
-    quizzes = [
-      QuizModel(
-          title: "NLW 5 Flutter",
-          questionAnswered: 2,
-          questions: [
-            QuestionModel(
-                title: "Você esta gostando de trabalhar com Flutter?",
-                answers: [
-                  AnswerModel(title: "Muito", isRight: true),
-                  AnswerModel(title: "Não"),
-                  AnswerModel(title: "Mais ou menos"),
-                  AnswerModel(title: "Sim"),
-                ]),
-            QuestionModel(
-                title: "Você esta gostando de trabalhar com Flutter?",
-                answers: [
-                  AnswerModel(title: "Muito", isRight: true),
-                  AnswerModel(title: "Não"),
-                  AnswerModel(title: "Mais ou menos"),
-                  AnswerModel(title: "Sim"),
-                ]),
-            QuestionModel(
-                title: "Você esta gostando de trabalhar com Flutter?",
-                answers: [
-                  AnswerModel(title: "Muito", isRight: true),
-                  AnswerModel(title: "Não"),
-                  AnswerModel(title: "Mais ou menos"),
-                  AnswerModel(title: "Sim"),
-                ])
-          ],
-          imagem: AppImages.blocks,
-          level: Level.facil)
-    ];
+    quizzes = await repository.getQuizzes();
     state = HomeState.success;
   }
 }
