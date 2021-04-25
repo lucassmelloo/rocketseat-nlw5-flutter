@@ -16,13 +16,13 @@
       ]
       },
       {
-        "title": "Você esta gostando de trabalhar com Flutter?",
+        "title": "Qual curso o Lucas faz?",
         "answers": [
-          {"title": "Muito",
+          {"title": "Ciencia da Computação",
             "isRight": true},
-          {"title": "Não"},
-          {"title": "Mais ou menos"},
-          {"title": "Sim"}
+          {"title": "Sistemas da informação"},
+          {"title": "Direito"},
+          {"title": "Gestão de Pessoas"}
         ]
       }
     ]
